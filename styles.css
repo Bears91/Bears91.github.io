@@ -143,3 +143,7 @@ dialog p {
 .backgroundblanc {
   background-color: white;
 }
+
+#jeu-memoire.hidden {
+  display: none;
+}

@@ -91,29 +91,33 @@ function AfficherFenetre() {
   jeumemoire.classList.add('page-disabled'); 
 }
 
-// Activer la page html lorsque le dialogue est fermé
-function CacherFenetre() {
-  dialogue.classList.add('hidden'); 
-  jeumemoire.classList.remove('page-disabled'); 
-  fondimage();
-  jeustop();
-}
 // Vérifie si le dialogue doit être affiché
 function verifierAffichageDialogue() {
   const dialogueCache = localStorage.getItem('dialogueCache');
   if (dialogueCache === 'true') {
-    dialogue.classList.add('hidden'); 
-    jeumemoire.classList.remove('page-disabled'); 
+    dialogue.classList.add('hidden');
+    jeumemoire.classList.remove('hidden');
   } else {
-    AfficherFenetre();
+    jeumemoire.classList.add('hidden'); 
+    dialogue.classList.remove('hidden');
   }
 }
+
+// Activer la page html lorsque le dialogue est fermé
+function CacherFenetre() {
+  dialogue.classList.add('hidden');
+  jeumemoire.classList.remove('hidden');
+  fondimage();
+  jeustop();
+}
+
 // Cache le dialogue de façon permanente
 function cacherFenetrePourToujours() {
   localStorage.setItem('dialogueCache', 'true'); 
   CacherFenetre(); 
   jeustop();
 }
+
 // Active la verification du dialogue au chargement de la page html
 document.addEventListener('DOMContentLoaded', () => {
   verifierAffichageDialogue();
