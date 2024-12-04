@@ -7,7 +7,7 @@
 body {
   height: 100vh;
   display: flex;
-  background: #060AB2;
+  flex-direction: row;
 }
 
 .memory-game {
@@ -52,4 +52,94 @@ body {
 
 .front-face {
   transform: rotateY(180deg);
+}
+
+.hidden { 
+  display: none;
+}
+
+#timer { 
+  font-weight: bold;
+  font-size: 4em;
+}
+
+#meilleurTemps
+{
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.page-disabled {
+  pointer-events: none;
+  opacity: 0.5; 
+}
+
+dialog {
+  width: 100vw; 
+  height: 100vh; 
+  border: none; 
+  padding: 0; 
+  background: rgb(255, 255, 255); 
+  color: black; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+dialog p {
+  font-size: 1.5em; 
+  text-align: center; 
+}
+
+.hidden {
+  display: none; 
+}
+
+#Dialogue {
+  padding: 20px;
+}
+
+#controles img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#controles img:hover {
+  transform: scale(1.1); 
+}
+
+#controles {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; 
+  align-items: center; 
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+#jeu-memoire {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  margin: 20px;
+}
+
+#NbPaires 
+{
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.backgroundimg {
+  background-image: url(img/Fonddecran.jpg);
+}
+
+.backgroundblanc {
+  background-color: white;
 }

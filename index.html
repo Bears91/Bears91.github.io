@@ -3,67 +3,98 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Memory Game</title>
+  <title>Jeu de mémoire</title>
 
   <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
 </head>
-<body>
-  <section class="memory-game">
-    <div class="memory-card" data-framework="aurelia">
-      <img class="front-face" src="../img/aurelia.svg" alt="Aurelia" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+<body id="body" class="backgroundimg">
+  <dialog id="Dialogue">
+    <div id="conteneurdialog">
+      <h1>Projet Personnel</h1>
+      <br>
+      <p>Page Réaliser par :</p>
+      <p>Bryan Dubois</p>
+      <br>
+      <p>Inspiration :</p>
+      <a href=" https://marina-ferreira.github.io/memory-game/"><p>Jeu de mémoire</p></a>
+      <br>
+      <form method="dialog">
+        <button type="button" onclick="CacherFenetre()">Fermez la fenêtre</button>
+        <p onclick="cacherFenetrePourToujours()">Fermez cette fenetre pour toujours</p>
+      </form>
     </div>
-    <div class="memory-card" data-framework="aurelia">
-      <img class="front-face" src="../img/aurelia.svg" alt="Aurelia" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    <br>
+    <img src="img/doigt.png" width="200px" height="200px">
+  </dialog>
+  <div id="jeu-memoire">
+  <section id="memoire" class="memory-game">
+    <div class="memory-card" data-framework="EFT">
+      <img class="front-face" src="img/FT.jpg" alt="Embleme Fairy Tail" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
     </div>
-
-    <div class="memory-card" data-framework="vue">
-      <img class="front-face" src="../img/vue.svg" alt="Vue" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-    </div>
-    <div class="memory-card" data-framework="vue">
-      <img class="front-face" src="../img/vue.svg" alt="Vue" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-    </div>
-
-    <div class="memory-card" data-framework="angular">
-      <img class="front-face" src="../img/angular.svg" alt="Angular" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-    </div>
-    <div class="memory-card" data-framework="angular">
-      <img class="front-face" src="../img/angular.svg" alt="Angular" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-    </div>
-
-    <div class="memory-card" data-framework="ember">
-      <img class="front-face" src="../img/ember.svg" alt="Ember" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-    </div>
-    <div class="memory-card" data-framework="ember">
-      <img class="front-face" src="../img/ember.svg" alt="Ember" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    <div class="memory-card" data-framework="EFT">
+      <img class="front-face" src="img/FT.jpg" alt="Embleme Fairy Tail" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
     </div>
 
-    <div class="memory-card" data-framework="backbone">
-      <img class="front-face" src="../img/backbone.svg" alt="Backbone" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    <div class="memory-card" data-framework="ESB">
+      <img class="front-face" src="img/SB.jpg" alt="Embleme SaberTooth" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
     </div>
-    <div class="memory-card" data-framework="backbone">
-      <img class="front-face" src="../img/backbone.svg" alt="Backbone" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    <div class="memory-card" data-framework="ESB">
+      <img class="front-face" src="img/SB.jpg" alt="Embleme SaberTooth" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
     </div>
 
-    <div class="memory-card" data-framework="react">
-      <img class="front-face" src="../img/react.svg" alt="React" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    <div class="memory-card" data-framework="ELS">
+      <img class="front-face" src="img/LS.jpg" alt="Embleme Lamia Scale" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
     </div>
-    <div class="memory-card" data-framework="react">
-      <img class="front-face" src="../img/react.svg" alt="React" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    <div class="memory-card" data-framework="ELS">
+      <img class="front-face" src="img/LS.jpg" alt="Embleme Lamia Scale" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
+    </div>
+
+    <div class="memory-card" data-framework="EPL">
+      <img class="front-face" src="img/PL.jpg" alt="Embleme Phantom Lord" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
+    </div>
+    <div class="memory-card" data-framework="EPL">
+      <img class="front-face" src="img/PL.jpg" alt="Embleme Phantom Lord" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
+    </div>
+
+    <div class="memory-card" data-framework="ETT">
+      <img class="front-face" src="img/TT.jpg" alt="Embleme Tartaros" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
+    </div>
+    <div class="memory-card" data-framework="ETT">
+      <img class="front-face" src="img/TT.jpg" alt="Embleme Tartaros" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
+    </div>
+
+    <div class="memory-card" data-framework="EGH">
+      <img class="front-face" src="img/GH.jpg" alt="Embleme Grimoire Heart" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
+    </div>
+    <div class="memory-card" data-framework="EGH">
+      <img class="front-face" src="img/GH.jpg" alt="Embleme Grimoire Heart" />
+      <img class="back-face" src="img/Logo Cartes.jpg" alt="Logo Fairy Tail" />
     </div>
   </section>
+  <aside id="controles">
+    <div id="timer"></div>
 
-  <script src="scripts.js"></script>
+    <div id="meilleurTemps"></div>
+
+    <div onclick="Timer()">
+      <img src="img/Start button.jpg" height="200px" width="200px">
+    </div>
+
+    <div id="NbPaires"></div>
+  </aside>
+
+  </div>
 </body>
 </html>
