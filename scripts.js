@@ -10,6 +10,9 @@ let lockBoard = false;
 let firstCard, secondCard;
 let nbpairestrouver = 0;
 
+jeumemoire.classList.remove('page-disabled');
+fondimage();
+
 function flipCard() { // retourne la carte quand on clique dessus
   if (lockBoard) return;
   if (this === firstCard) return;
@@ -77,11 +80,12 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 // Active AfficherFenetre() quand la page html est charger
 document.addEventListener('DOMContentLoaded', () => {
-  AfficherFenetre();
+  verifierAffichageDialogue();
 });
 
 // Désactiver la page html lorsque le dialogue est ouvert
 function AfficherFenetre() {
+  dialogue.close();
   dialogue.showModal(); 
   fondBlanc();
   jeumemoire.classList.add('page-disabled'); 
@@ -89,7 +93,6 @@ function AfficherFenetre() {
 
 // Activer la page html lorsque le dialogue est fermé
 function CacherFenetre() {
-  dialogue.close(); 
   dialogue.classList.add('hidden'); 
   jeumemoire.classList.remove('page-disabled'); 
   fondimage();
@@ -102,8 +105,7 @@ function verifierAffichageDialogue() {
     dialogue.classList.add('hidden'); 
     jeumemoire.classList.remove('page-disabled'); 
   } else {
-    dialogue.showModal(); 
-    jeumemoire.classList.add('page-disabled'); 
+    AfficherFenetre();
   }
 }
 // Cache le dialogue de façon permanente
